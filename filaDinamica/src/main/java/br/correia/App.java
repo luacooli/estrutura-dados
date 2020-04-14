@@ -13,21 +13,18 @@ public final class App {
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-        Lista lista = new Lista();
+        Pilha pilha = new Pilha();
 
-        lista.addEnd("Lua");
-        lista.addEnd("Naka");
-        lista.addStart("Leticia");
-        lista.addEnd("Pedro");
+        pilha.push("Lua");
+        pilha.push("Naka");
+        pilha.push("Pedro");
+        pilha.push("Leticia");
 
-        System.out.println(lista.show());
+        System.out.println(pilha.show());
+        System.out.println("No topo esta o valor: " + pilha.peek());
 
-        No removido = lista.removeStart();
+        No removido = pilha.pop();
         System.out.println("removido " + removido.getInfo());
-        System.out.println(lista.show());
-
-        removido = lista.removeEnd();
-        System.out.println("removido " + removido.getInfo());
-        System.out.println(lista.show());
+        System.out.println(pilha.show());
     }
 }
